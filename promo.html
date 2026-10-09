@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>爆款复刻 · 站内宣传方案 v1.0</title>
+<style>
+  :root{
+    --ink:#1a1d24; --ink2:#4a4f5a; --ink3:#8a8f9a;
+    --bg:#f6f7f9; --card:#ffffff; --line:#e6e8ec;
+    --brand:#2b5cff; --brand-bg:#eef3ff;
+    --red:#d9463e; --red-bg:#fdeeec;
+    --green:#1f9d6b; --green-bg:#e9f7f0;
+    --amber:#c77d0a; --amber-bg:#fdf4e4;
+    --purple:#7c5cff; --purple-bg:#f1edff;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:"PingFang SC","Microsoft YaHei",-apple-system,sans-serif;background:var(--bg);color:var(--ink);line-height:1.75;font-size:15px;}
+  .wrap{max-width:1080px;margin:0 auto;padding:32px 24px 80px;}
+  header{background:linear-gradient(135deg,#1c2b5e 0%,#2b5cff 100%);color:#fff;border-radius:16px;padding:40px 44px;margin-bottom:28px;}
+  header .tag{display:inline-block;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.3);border-radius:999px;padding:2px 14px;font-size:13px;letter-spacing:1px;margin-bottom:14px;}
+  header h1{font-size:30px;font-weight:700;margin-bottom:10px;}
+  header .sub{font-size:15px;opacity:.85;max-width:820px;}
+  header .meta{display:flex;gap:24px;margin-top:22px;font-size:13px;opacity:.8;flex-wrap:wrap;}
+  .meta b{font-weight:600;opacity:1;}
+
+  .concl{background:var(--card);border:1px solid var(--line);border-left:5px solid var(--brand);border-radius:12px;padding:26px 30px;margin-bottom:36px;}
+  .concl h2{font-size:19px;margin-bottom:14px;}
+  .concl ol{padding-left:22px;}
+  .concl li{margin:7px 0;}
+
+  section{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:30px 34px;margin-bottom:26px;}
+  h2.sec{font-size:20px;font-weight:700;margin-bottom:6px;display:flex;align-items:center;gap:10px;}
+  h2.sec .no{background:var(--brand);color:#fff;border-radius:8px;min-width:32px;height:32px;display:inline-flex;align-items:center;justify-content:center;font-size:15px;font-weight:700;}
+  .sec-desc{color:var(--ink2);font-size:14px;margin-bottom:20px;}
+  h3{font-size:16px;font-weight:600;margin:22px 0 10px;}
+
+  table{width:100%;border-collapse:collapse;font-size:13.5px;margin:12px 0;}
+  th{background:#f0f2f6;text-align:left;padding:10px 12px;border:1px solid var(--line);font-weight:600;white-space:nowrap;}
+  td{padding:10px 12px;border:1px solid var(--line);vertical-align:top;}
+  tr:nth-child(even) td{background:#fafbfc;}
+
+  .pill{display:inline-block;border-radius:6px;padding:1px 9px;font-size:12px;font-weight:600;white-space:nowrap;}
+  .p-p0{background:var(--red-bg);color:var(--red);}
+  .p-p1{background:var(--amber-bg);color:var(--amber);}
+  .p-p2{background:var(--bg);color:var(--ink3);}
+  .p-rec{background:var(--green-bg);color:var(--green);}
+
+  .ab{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:14px 0;}
+  .ab .opt{border:1px solid var(--line);border-radius:10px;padding:16px 18px;background:#fbfcfd;}
+  .ab .opt.win{border:2px solid var(--green);background:var(--green-bg);}
+  .ab .opt h4{font-size:14px;margin-bottom:8px;display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
+  .ab .opt ul{padding-left:18px;font-size:13px;color:var(--ink2);}
+  .ab .opt li{margin:3px 0;}
+  .verdict{background:var(--card);border:1px dashed var(--green);border-radius:8px;padding:10px 16px;font-size:13.5px;margin-top:2px;color:var(--ink);}
+  .verdict b{color:var(--green);}
+
+  .callout{border-radius:10px;padding:14px 18px;font-size:13.5px;margin:14px 0;border:1px solid;}
+  .c-blue{background:var(--brand-bg);border-color:#c9d8ff;}
+  .c-amber{background:var(--amber-bg);border-color:#f0dcae;}
+  .c-red{background:var(--red-bg);border-color:#f2cdc9;}
+  .c-green{background:var(--green-bg);border-color:#bfe5d3;}
+
+  .funnel{display:flex;flex-direction:column;gap:6px;margin:16px 0;}
+  .fstep{display:flex;align-items:center;gap:14px;}
+  .fbar{height:38px;border-radius:8px;background:var(--brand-bg);border:1px solid #c9d8ff;display:flex;align-items:center;padding:0 16px;font-size:13px;font-weight:600;color:var(--ink);min-width:280px;}
+  .fnote{font-size:12.5px;color:var(--ink3);}
+  .fstep:nth-child(1) .fbar{width:100%;}
+  .fstep:nth-child(2) .fbar{width:86%;}
+  .fstep:nth-child(3) .fbar{width:68%;}
+  .fstep:nth-child(4) .fbar{width:50%;}
+  .fstep:nth-child(5) .fbar{width:36%;}
+  .fstep:nth-child(6) .fbar{width:26%;background:var(--green-bg);border-color:#bfe5d3;}
+
+  .timeline{position:relative;margin:18px 0;padding-left:26px;}
+  .timeline::before{content:"";position:absolute;left:8px;top:6px;bottom:6px;width:2px;background:var(--line);}
+  .titem{position:relative;margin-bottom:18px;}
+  .titem::before{content:"";position:absolute;left:-24px;top:7px;width:10px;height:10px;border-radius:50%;background:var(--brand);border:2px solid #fff;box-shadow:0 0 0 2px var(--brand-bg);}
+  .titem .tt{font-weight:700;font-size:14px;color:var(--brand);}
+  .titem .td{font-size:13.5px;color:var(--ink2);}
+
+  .copy{background:#f7f8fa;border:1px solid var(--line);border-radius:8px;padding:12px 16px;font-size:13.5px;margin:8px 0;}
+  .copy .lab{font-size:11.5px;color:var(--ink3);letter-spacing:1px;margin-bottom:4px;}
+
+  .grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px;margin:14px 0;}
+  .mini{border:1px solid var(--line);border-radius:10px;padding:16px 18px;background:#fbfcfd;}
+  .mini h4{font-size:14px;margin-bottom:8px;}
+  .mini p,.mini li{font-size:13px;color:var(--ink2);}
+  .mini ul{padding-left:18px;}
+
+  footer{color:var(--ink3);font-size:12.5px;text-align:center;margin-top:36px;line-height:1.9;}
+  .kbd{background:#eef0f4;border-radius:4px;padding:0 6px;font-size:12.5px;font-family:inherit;}
+  @media (max-width:720px){.ab{grid-template-columns:1fr;}header{padding:28px;}section{padding:22px;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="tag">站内增长方案 · 内部资料</div>
+  <h1>「爆款复刻」站内宣传方案</h1>
+  <div class="sub">围绕"粘贴爆款链接 → AI 拆解 → 生成你的同款"这一核心卖点，在我们产品现有站内触点上完成首次大规模曝光与使用转化。本方案为 v1.0，覆盖目标、触点矩阵、激励设计、素材文案、上线节奏与实验设计。</div>
+  <div class="meta">
+    <span>版本 <b>v1.0</b></span>
+    <span>阶段 <b>上线预热 → 上线后 4 周</b></span>
+    <span>范围 <b>站内（PC Web + 移动 H5）</b></span>
+    <span>日期 <b>2026-10-08</b></span>
+  </div>
+</header>
+
+<div class="concl">
+  <h2>结论先行（30 秒版）</h2>
+  <ol>
+    <li><b>一句话卖点</b>：不用会拍、不用会剪——把刷到的爆款链接粘进来，就能得到一条自己的同款。宣传的核心不是讲功能，而是<b>演示结果</b>。</li>
+    <li><b>站内打法</b>：上线周用「开屏一次曝光 + 首次免费旗舰体验」集中引爆，之后靠「意图识别推荐 + 生成完成页交叉引流」沉淀为常态化入口，4 周内完成从活动到习惯的过渡。</li>
+    <li><b>关键钩子</b>：首次复刻免积分（限一次、旗舰模型、带防刷约束），让用户零成本体验完整 S1→S5 链路——出片那一刻就是付费动机产生的那一刻。</li>
+    <li><b>两条红线</b>：① 宣传素材必须用真实生成结果，禁止过度承诺画质与耗时；② 活动元素全部可关闭、到期自动撤除，不与产品"极简、无常驻打扰"的原则冲突。</li>
+    <li><b>胜负手指标</b>：不是曝光量，而是<b>触点点击 → 进入 S1 → 完成出片（S5）的转化率</b>，以及出片用户的 7 日内二次复刻率。</li>
+  </ol>
+</div>
+
+<section>
+  <h2 class="sec"><span class="no">1</span>目标与指标框架</h2>
+  <p class="sec-desc">先定义"吸引使用"的可度量口径，所有宣传动作向同一组漏斗指标对齐。</p>
+
+  <h3>1.1 三层目标</h3>
+  <table>
+    <tr><th>层次</th><th>目标</th><th>口径</th><th>参考区间（假设值，待数据校准）</th></tr>
+    <tr><td>认知层</td><td>存量用户知道有这个功能、能一句话说清它干嘛</td><td>触点曝光 UV / 活跃 UV</td><td>上线 2 周内 ≥ 70%（多触点叠加）</td></tr>
+    <tr><td>行为层</td><td>点进来看看，且走完第一次</td><td>触点点击率 → S1→S5 完成率</td><td>点击率 6–12%；完成率以 PRD 指标为准</td></tr>
+    <tr><td>商业层</td><td>复刻成为积分消耗的常态化场景</td><td>复刻用户 7 日二次复刻率；复刻带来的积分消耗占比</td><td>二次复刻 ≥ 25%；消耗占比持续爬升</td></tr>
+  </table>
+
+  <h3>1.2 统一漏斗（所有触点共用）</h3>
+  <div class="funnel">
+    <div class="fstep"><div class="fbar">触点曝光（开屏 / Banner / Chat 推荐 / 完成页）</div><div class="fnote">按触点分别归因</div></div>
+    <div class="fstep"><div class="fbar">点击 → 进入 S1</div><div class="fnote">各触点 CTR 对比的主战场</div></div>
+    <div class="fstep"><div class="fbar">提交链接 / 上传，进入 S2 解析</div><div class="fnote">素材门槛损失点</div></div>
+    <div class="fstep"><div class="fbar">S3 点击「开始生成」</div><div class="fnote">积分门槛损失点（首次免费直接消除）</div></div>
+    <div class="fstep"><div class="fbar">S5 成片交付</div><div class="fnote">首次出片 = 转化的分水岭</div></div>
+    <div class="fstep"><div class="fbar">下载 / 分享 / 7 日内二次复刻</div><div class="fnote">商业价值的真正起点</div></div>
+  </div>
+  <div class="callout c-amber"><b>埋点前置</b>：本漏斗依赖 PRD 开放问题第 6 条（埋点方案，owner 待指定）。宣传上线前埋点必须先行——否则所有触点 ROI 无法归因，复盘只剩感觉。建议将「埋点就绪」作为宣传启动的硬性前置条件。</div>
+</section>
+
+<section>
+  <h2 class="sec"><span class="no">2</span>用户分层与差异化话术</h2>
+  <p class="sec-desc">同一功能，对不同存量用户的价值主张不同；全量一套文案是最常见的浪费。</p>
+  <table>
+    <tr><th>分层</th><th>特征</th><th>价值主张</th><th>主推触点</th></tr>
+    <tr><td><b>高活跃创作者</b></td><td>周内多次生成、已付费或积分余量足</td><td>效率工具：「爆款结构 30 秒拆完，直接改成你的版本」</td><td>生成完成页交叉推荐、Chat 意图推荐</td></tr>
+    <tr><td><b>低活跃用户</b></td><td>月内少量使用、对复杂功能有畏难</td><td>降门槛：「不会拍也没关系，粘个链接就行」+ 首次免费</td><td>开屏、首页 Banner、任务中心</td></tr>
+    <tr><td><b>沉睡用户</b></td><td>30 天以上未活跃</td><td>召回钩子：「回来试试新玩法，这次不用你自己做」+ 免费额度</td><td>站内信 / App push / 邮件（站内延展位）</td></tr>
+    <tr><td><b>新注册用户</b></td><td>onboarding 阶段</td><td>认知植入：把复刻做进新手引导的"三大能力"之一</td><td>新用户 onboarding 流程</td></tr>
+  </table>
+</section>
+
+<section>
+  <h2 class="sec"><span class="no">3</span>站内触点矩阵（核心）</h2>
+  <p class="sec-desc">按"上线期集中引爆 → 常态期入口沉淀"两阶段规划，每个触点标注优先级与生命周期。</p>
+
+  <h3>3.1 上线期（T0 – T+7）：集中曝光</h3>
+  <table>
+    <tr><th>触点</th><th>位置与形态</th><th>内容</th><th>优先级</th><th>生命周期</th></tr>
+    <tr><td>开屏页</td><td>进入产品时全屏 3 秒可跳过，展示"原片 → 复刻"双屏对比自动播放</td><td>演示结果 + 「首次免费体验」角标</td><td><span class="pill p-p0">P0</span></td><td>上线首周，每账号仅 1 次</td></tr>
+    <tr><td>首页 Banner</td><td>首页首位轮播卡</td><td>同开屏素材，点击直达 S1</td><td><span class="pill p-p0">P0</span></td><td>活动期 2 周，之后降位</td></tr>
+    <tr><td>金刚区入口</td><td>首页功能宫格新增「爆款复刻」图标（带 New 角标）</td><td>常驻功能入口</td><td><span class="pill p-p0">P0</span></td><td>长期常驻</td></tr>
+    <tr><td>站内信 / 公告</td><td>消息中心 + 弹层公告</td><td>上线通知 + 免费额度说明</td><td><span class="pill p-p1">P1</span></td><td>一次性</td></tr>
+    <tr><td>任务中心</td><td>每日 / 每周任务新增「完成 1 次复刻」</td><td>完成送小额积分</td><td><span class="pill p-p1">P1</span></td><td>长期</td></tr>
+  </table>
+
+  <h3>3.2 常态期（T+7 之后）：场景化引流</h3>
+  <table>
+    <tr><th>触点</th><th>触发时机</th><th>行为</th><th>优先级</th></tr>
+    <tr><td>Chat 意图推荐</td><td>用户在对话中表达"复刻 / 同款 / 爆款 / 想拍但不会拍"等意图</td><td>对话流内插入复刻功能卡片，直达 S1</td><td><span class="pill p-p0">P0</span></td></tr>
+    <tr><td>生成完成页交叉推荐</td><td>用户用其他能力（chat / canvas）完成一次视频生成</td><td>结果页下方推荐「试试把爆款变成你的」，附 1 条演示</td><td><span class="pill p-p0">P0</span></td></tr>
+    <tr><td>素材/模板中心</td><td>用户浏览模板或寻找灵感</td><td>复刻专区：热门榜单同步展示（每天 10:00 更新，与 S1 榜单复用）</td><td><span class="pill p-p1">P1</span></td></tr>
+    <tr><td>积分不足提示页</td><td>用户积分不足以生成时</td><td>提示完成任务（含复刻任务）赚取积分</td><td><span class="pill p-p2">P2</span></td></tr>
+  </table>
+
+  <div class="callout c-blue"><b>复用即节省</b>：S1 首页的"原片 → 复刻双屏对比演示 + 三套示例（存钱 / 美食 / 穿搭）"本身就是最好的宣传素材，开屏、Banner、Chat 卡片全部复用同一组素材，一次生产、多端分发。素材由运营侧按 PRD 依赖清单供给（owner 需在评审时明确）。</div>
+
+  <h3>3.3 关键决策：首曝形式 A/B</h3>
+  <div class="ab">
+    <div class="opt">
+      <h4>方案 A：全屏弹窗（强制互动）</h4>
+      <ul>
+        <li>曝光完成度高，点击率通常更高</li>
+        <li>打断感强，与产品极简原则冲突</li>
+        <li>用户可能直接关闭并产生负面印象</li>
+      </ul>
+    </div>
+    <div class="opt win">
+      <h4>方案 B：开屏 3 秒可跳过 <span class="pill p-rec">推荐</span></h4>
+      <ul>
+        <li>曝光完成度同样高（3 秒内自动播放演示）</li>
+        <li>可跳过 = 不打扰，符合产品"无常驻打扰"原则</li>
+        <li>每账号仅展示 1 次，稀缺感反而提升点击</li>
+      </ul>
+    </div>
+  </div>
+  <div class="verdict"><b>推荐 B</b>。首曝的目的是"让用户看见结果长什么样"，3 秒动态演示已经完成传达；强制互动带来的打扰成本在 AI 工具用户中口碑代价偏高。上线后若 B 的 CTR 低于预期下限，再考虑 A/B 对照实验验证。</div>
+</section>
+
+<section>
+  <h2 class="sec"><span class="no">4</span>激励设计：首次免费 + 任务解锁</h2>
+  <p class="sec-desc">复刻是积分消耗场景（生成 3–8 分钟、多模型计价），激励设计的本质是<b>用一次受控的免费体验换取付费动机</b>，同时守住防刷底线。</p>
+
+  <h3>4.1 免费额度结构 A/B</h3>
+  <div class="ab">
+    <div class="opt">
+      <h4>方案 A：首次全免（任意模型 30s）</h4>
+      <ul>
+        <li>体验最完整，出片效果最好</li>
+        <li>单次成本最高（旗舰模型 + 30s）</li>
+        <li>被批量注册薅羊毛的风险最大</li>
+      </ul>
+    </div>
+    <div class="opt win">
+      <h4>方案 B：旗舰一次 + 任务解锁第二次 <span class="pill p-rec">推荐</span></h4>
+      <ul>
+        <li>第一次：免费用旗舰模型出一条 15–30s 成片（完整体验 S1→S5）</li>
+        <li>第二次：完成轻任务解锁（如成功分享一次 / 完成新手指引）</li>
+        <li>总成本可控（户均 ≤ 2 次），且第二次附带传播或留存动作</li>
+      </ul>
+    </div>
+  </div>
+  <div class="verdict"><b>推荐 B</b>。第一次必须给旗舰体验——如果免费额度只给低成本模型（如耗时 6 分钟的入门档），"生成慢 + 效果平"的第一印象会直接杀死复购意愿；但无上限的全免不可接受。两次封顶 + 任务解锁是体验与成本的平衡点。</div>
+
+  <h3>4.2 防刷约束（与商业护栏指标联动）</h3>
+  <table>
+    <tr><th>约束</th><th>规则</th></tr>
+    <tr><td>账号限制</td><td>免费额度每账号（非每设备）限 2 次，需完成手机号绑定</td></tr>
+    <tr><td>设备指纹</td><td>同设备多账号领取时仅首个账号生效</td></tr>
+    <tr><td>频次监控</td><td>单账号 24h 生成次数、同 IP 多账号行为进入风控阈值（与 PRD 评审建议的护栏指标同一套）</td></tr>
+    <tr><td>异常处置</td><td>命中风控的账号免费额度冻结，人工复核后恢复</td></tr>
+  </table>
+  <div class="callout c-red"><b>红线</b>：免费活动上线前，风控阈值必须先于活动生效——先开闸再补门等于直接给羊毛党发钱。这条作为活动上线的硬性前置条件。</div>
+</section>
+
+<section>
+  <h2 class="sec"><span class="no">5</span>宣传素材与文案</h2>
+  <p class="sec-desc">文案原则：只承诺可以兑现的；用结果演示代替功能罗列；数字表述克制（"听听就好"风格，不绝对化）。</p>
+
+  <h3>5.1 主文案 A/B</h3>
+  <div class="ab">
+    <div class="opt">
+      <h4>方向 A：功能说明型</h4>
+      <ul>
+        <li>「全新爆款复刻功能上线：AI 拆解爆款结构，一键生成你的同款视频」</li>
+        <li>信息完整，但像产品说明书</li>
+        <li>用户需要自己翻译成"关我什么事"</li>
+      </ul>
+    </div>
+    <div class="opt win">
+      <h4>方向 B：场景共鸣型 <span class="pill p-rec">推荐</span></h4>
+      <ul>
+        <li>主标题：「刷到爆款，想想就好？粘个链接，就是你的」</li>
+        <li>副标题：「不用会拍、不用会剪——AI 拆完结构，直接给你一条能用的同款」</li>
+        <li>命中"这条我能拍 → 但做不到"的真实心理落差</li>
+      </ul>
+    </div>
+  </div>
+  <div class="verdict"><b>推荐 B</b>。目标用户的卡点不是"不知道有这个功能"，而是"觉得做视频这件事很难"。文案要卖的是"你也行"，不是"功能很全"。</div>
+
+  <h3>5.2 分层文案速查</h3>
+  <div class="copy"><div class="lab">高活跃创作者</div>「爆款的结构，AI 30 秒拆完。改成你的版本，不用从零开始。」</div>
+  <div class="copy"><div class="lab">低活跃 / 沉睡用户</div>「这次真的不用你会做视频——粘个链接试试，第一次免费。」</div>
+  <div class="copy"><div class="lab">新用户（onboarding）</div>「三个能力里最简单的一个：把你喜欢的视频，变成你自己的。」</div>
+  <div class="copy"><div class="lab">开屏 / Banner（结果演示型）</div>双屏自动播放：左「别人的爆款」→ 右「你的同款」，角标「首次免费」。</div>
+
+  <h3>5.3 素材生产清单</h3>
+  <table>
+    <tr><th>素材</th><th>规格</th><th>来源</th><th>数量</th></tr>
+    <tr><td>开屏演示（原片→复刻对比）</td><td>竖屏 9:16 + 横版 16:9 各一套</td><td>用复刻功能真实生成（吃自己的狗粮）</td><td>3 套（存钱 / 美食 / 穿搭，复用 S1 示例）</td></tr>
+    <tr><td>Banner 静帧 + 动图</td><td>1440×400 / 750×360</td><td>从演示中截取最佳对比帧</td><td>各 3 张</td></tr>
+    <tr><td>Chat 推荐卡片</td><td>卡片内嵌 15s 循环演示</td><td>演示素材剪辑</td><td>1 套</td></tr>
+    <tr><td>优秀作品案例库</td><td>用户授权的真实复刻作品</td><td>T+7 后征集（见第 6 节）</td><td>持续积累</td></tr>
+  </table>
+  <div class="callout c-amber"><b>承诺管理</b>：所有对外素材只使用真实生成结果，且成片耗时表述用「几分钟」而非具体秒数；画质不使用"媲美原片"等表述。宣传承诺与实际体验的落差是 AI 产品差评的第一来源。</div>
+</section>
+
+<section>
+  <h2 class="sec"><span class="no">6</span>上线节奏（T-7 → T+28）</h2>
+  <p class="sec-desc">以功能上线日为 T0；前置项与 PRD 评审的开放问题闭环节奏对齐。</p>
+  <div class="timeline">
+    <div class="titem"><div class="tt">T-7 · 预热</div><div class="td">站内公告「新功能预告」+ 预约入口（预约用户上线时优先获得免费额度）；素材三套演示进入制作与内部走查；埋点方案评审。</div></div>
+    <div class="titem"><div class="tt">T-3 · 就绪检查</div><div class="td">硬性前置条件确认：埋点就绪 ✓ / 风控阈值生效 ✓ / 免费额度后台配置 ✓ / 素材双端适配 ✓。任一未就绪则整体顺延，不裸奔上线。</div></div>
+    <div class="titem"><div class="tt">T0 · 上线引爆</div><div class="td">开屏 + Banner + 金刚位 + 站内信同日上线；免费额度生效；首日盯漏斗实时数据（触点 CTR、S1 进入量、生成队列负载）。</div></div>
+    <div class="titem"><div class="tt">T+1 ~ T+7 · 引爆周</div><div class="td">按触点 CTR 数据调整素材（保留最优、替换最差）；Chat 意图推荐与完成页交叉推荐灰度放量；每 2 天输出一次漏斗简报。</div></div>
+    <div class="titem"><div class="tt">T+7 ~ T+14 · 案例与传播</div><div class="td">征集用户优秀复刻作品（授权后进入案例库与素材中心）；「复刻挑战」轻活动：晒成片赢积分。</div></div>
+    <div class="titem"><div class="tt">T+14 ~ T+28 · 常态化</div><div class="td">活动元素按计划撤除（开屏下线、Banner 降位）；金刚位与场景化推荐成为长期入口；输出 4 周复盘：渗透率、完成率、二次复刻率、积分消耗结构、免费额度成本与防刷命中。</div></div>
+  </div>
+</section>
+
+<section>
+  <h2 class="sec"><span class="no">7</span>实验设计</h2>
+  <p class="sec-desc">上线期只做必要的对照实验，避免同时改动过多变量。</p>
+  <table>
+    <tr><th>实验</th><th>分组</th><th>主指标</th><th>判定</th></tr>
+    <tr><td>E1 开屏素材</td><td>存钱 vs 美食 vs 穿搭三套演示轮播分组</td><td>开屏 → S1 点击率</td><td>CTR 差异 ≥ 20% 保留最优，否则混用</td></tr>
+    <tr><td>E2 主文案</td><td>场景共鸣型 vs 功能说明型（Banner 位）</td><td>Banner CTR</td><td>差异不显著则固定用 B</td></tr>
+    <tr><td>E3 免费额度</td><td>「旗舰一次」vs「旗舰一次 + 任务解锁第二次」</td><td>7 日二次复刻率 / 成本</td><td>二次复刻率提升覆盖额外成本则保留任务版</td></tr>
+    <tr><td>E4 Chat 推荐</td><td>意图触发 vs 意图 + 每周一次轻推送</td><td>卡片点击率 / 负反馈率（关闭、屏蔽）</td><td>负反馈率上升超阈值即回收轻推送</td></tr>
+  </table>
+</section>
+
+<section>
+  <h2 class="sec"><span class="no">8</span>风险与克制原则</h2>
+  <div class="grid2">
+    <div class="mini"><h4>⛔ 过度打扰</h4><ul><li>开屏每账号仅 1 次；活动弹层可关闭且记住选择</li><li>Chat 推荐有频控（同一用户每周 ≤ 2 次）</li><li>活动结束所有临时元素自动撤除，不留常驻残留</li></ul></div>
+    <div class="mini"><h4>⛔ 薅羊毛</h4><ul><li>免费额度封顶 2 次 / 账号 + 手机绑定 + 设备指纹</li><li>风控阈值先于活动上线</li><li>异常频次监控接入每日复盘简报</li></ul></div>
+    <div class="mini"><h4>⛔ 承诺落差</h4><ul><li>素材全部真实生成，禁用"媲美原片 / 30 秒出片"类表述</li><li>生成耗时统一用"几分钟"量级表述</li><li>匹配度评分宣传中不使用具体分值示例</li></ul></div>
+    <div class="mini"><h4>⛔ 生成容量</h4><ul><li>免费体验集中涌入会冲击生成队列（单次 3–8 分钟）</li><li>上线首日与压测联动，必要时免费额度分批放量</li><li>队列过载时优先保付费用户体验</li></ul></div>
+  </div>
+</section>
+
+<section>
+  <h2 class="sec"><span class="no">9</span>待确认清单（评审时定）</h2>
+  <table>
+    <tr><th>#</th><th>事项</th><th>建议 owner</th><th>时点</th></tr>
+    <tr><td>1</td><td>免费额度的模型档位与成本上限（对应 4.1 方案 B 细化）</td><td>产品 + 财务口径</td><td>T-7 前</td></tr>
+    <tr><td>2</td><td>风控阈值参数（频次 / 设备 / 手机绑定规则）</td><td>风控 / 后端</td><td>T-7 前</td></tr>
+    <tr><td>3</td><td>埋点字段与漏斗归因口径</td><td>数据侧（同 PRD 开放问题 6）</td><td>T-7 前</td></tr>
+    <tr><td>4</td><td>三套演示素材的生产与双端适配</td><td>运营 + 设计</td><td>T-3 前</td></tr>
+    <tr><td>5</td><td>Chat 意图识别的触发词表与频控</td><td>算法 + 产品</td><td>T+7 灰度前</td></tr>
+    <tr><td>6</td><td>指标参考区间的数据校准（第 1 节假设值）</td><td>数据侧</td><td>T+14 复盘时</td></tr>
+  </table>
+</section>
+
+<footer>
+  「爆款复刻」站内宣传方案 v1.0 · 内部资料，请勿外传 · 生成于 2026-10-08<br>
+  指标区间为假设值待数据校准；素材与话术以真实可兑现为第一原则。
+</footer>
+
+</div>
+</body>
+</html>
